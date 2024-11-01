@@ -7,6 +7,8 @@ We use then these precalculated frame-based aggregates to correct value of the i
 Used on images, this approach allows selectively add contrast to underexposed areas while not overexposing other areas. 
 If we normalize image unselectively, expanding dynamic range to 0...255 will not help resolving details in areas with little local contrast
 
+Useful tutorial on the topic is here [https://habr.com/ru/articles/489734/]
+
 The Procedure
 
 1. First we set the rolling frame size where aggregation takes place
@@ -21,3 +23,5 @@ The Procedure
 10. Finally we normalize the image - first with simple min-max filter using max and min across the frame, i.e. contrasting a pixel relative to its neighbours
 11. then we normalize the image using sigma-based contrast analysis and checking if the frame is in global highlights and shadows, i.e. we look beyond the context of the particular frame, but carefully not overreaching global min, max and max contrast across frames.
 12. we show image histogram, source and two variants of corrected image    
+
+NOTE: lots of commented out code inside .py file was left for ease of debugging and experimenting
