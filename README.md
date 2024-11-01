@@ -34,8 +34,8 @@ Source image has insufficient contrast between paper and text, although contrast
 
 Simple frame-based min-max filter applied on image does good job for text but exposes waste on the background edges. This will make it harder to programmatically cut out page from the image.
 
-![Result2](https://github.com/user-attachments/assets/4f2d6a0d-8c46-4736-a637-cfc8054543e3)
-
-However, we have adaptive sigma- and highs/lows-based approach. The page is fine, underlying background edges are fine either. 
-
 ![Result1](https://github.com/user-attachments/assets/84f4a860-28fd-47e2-a731-bc42a7f3904f)
+
+However, we have adaptive sigma- and highs/lows-based approach. The page is fine, underlying background edges are much better. 
+
+![Result2](https://github.com/user-attachments/assets/4f2d6a0d-8c46-4736-a637-cfc8054543e3)
